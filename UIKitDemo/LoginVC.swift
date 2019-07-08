@@ -25,6 +25,10 @@ class LoginVC: UIViewController {
             print("登入失敗")
             return
         }
+        let userDefaults = UserDefaults()
+        userDefaults.set(self.emailTextField.text, forKey: "LoginEmail")
+        userDefaults.synchronize()
+        
         dismiss(animated: true, completion: nil)
     }
 }

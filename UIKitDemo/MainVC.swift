@@ -18,7 +18,11 @@ class MainVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        performSegue(withIdentifier: "TO_LOGIN_VC", sender: nil)
+        
+        guard let _ = UserDefaults().object(forKey: "LoginEmail") else {
+            performSegue(withIdentifier: "TO_LOGIN_VC", sender: nil)
+            return
+        }
     }
     
 
