@@ -13,11 +13,13 @@ class LoginVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    // MARK: - 生命周期函式
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    // MARK: - IBAction 函式
     @IBAction func loginButtonAction(_ sender: UIButton) {
     }
 }
