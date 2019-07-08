@@ -42,9 +42,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYv-ai-23v">
-                                <rect key="frame" x="87" y="596" width="240" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYv-ai-23v">
+                                <rect key="frame" x="65" y="521" width="284" height="30"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -53,9 +52,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6wO-pv-6AY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="48W-sR-RZv"/>
+                            <constraint firstItem="KYv-ai-23v" firstAttribute="top" secondItem="26g-N0-6HQ" secondAttribute="bottom" constant="30" id="4zh-Ny-Xut"/>
                             <constraint firstItem="6wO-pv-6AY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dkf-W9-iqx"/>
                             <constraint firstItem="Qkq-SG-SHG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Efo-xP-TgC"/>
+                            <constraint firstItem="KYv-ai-23v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GkM-Bz-N6b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6wO-pv-6AY" secondAttribute="trailing" constant="65" id="HUW-lU-WAd"/>
+                            <constraint firstItem="KYv-ai-23v" firstAttribute="width" secondItem="6wO-pv-6AY" secondAttribute="width" id="VDM-da-STd"/>
                             <constraint firstItem="aLc-b8-47w" firstAttribute="top" secondItem="Qkq-SG-SHG" secondAttribute="bottom" constant="50" id="aEF-SE-UqF"/>
                             <constraint firstItem="6wO-pv-6AY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="wAE-En-Qpg"/>
                         </constraints>
