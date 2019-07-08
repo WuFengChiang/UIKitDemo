@@ -21,6 +21,11 @@ class LoginVC: UIViewController {
 
     // MARK: - IBAction 函式
     @IBAction func loginButtonAction(_ sender: UIButton) {
+        guard self.emailTextField.text == "arCourse@studioa.net", self.passwordTextField.text == "123!@#" else {
+            print("登入失敗")
+            return
+        }
+        print("登入成功")
     }
 }
 
