@@ -81,9 +81,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="-366"/>
+            <point key="canvasLocation" x="2771.0144927536235" y="-366.29464285714283"/>
         </scene>
-        <!--訊息牆-->
+        <!--MainVC-->
         <scene sceneID="sPB-AI-kY8">
             <objects>
                 <viewController id="vWI-BZ-7fA" customClass="MainVC" customModule="UIKitDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="orM-JY-KHh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vWI-BZ-7fA" id="pWh-Vb-dyD"/>
@@ -109,15 +109,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hg8-6H-h39"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="訊息牆" id="4NL-wZ-oPB"/>
+                    <navigationItem key="navigationItem" id="kWB-Od-4iK"/>
                     <connections>
                         <outlet property="tableView" destination="orM-JY-KHh" id="IRZ-UR-JPh"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="TO_LOGIN_VC" id="WmN-RQ-Tqt"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="TO_LOGIN_VC" id="WmN-RQ-Tqt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aki-3p-rlp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886.95652173913049" y="-40.178571428571423"/>
+            <point key="canvasLocation" x="1797.1014492753625" y="-40.178571428571423"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jrf-tQ-awS">
@@ -129,7 +129,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vWI-BZ-7fA" kind="relationship" relationship="viewControllers" id="hLg-OJ-Bd3"/>
+                        <segue destination="034-mk-pjX" kind="relationship" relationship="viewControllers" id="hLg-OJ-Bd3"/>
                         <segue destination="mgw-Xo-7AF" kind="relationship" relationship="viewControllers" id="7xV-WK-EEJ"/>
                     </connections>
                 </tabBarController>
@@ -171,6 +171,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EO-hg-bFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="887" y="664"/>
+        </scene>
+        <!--訊息牆-->
+        <scene sceneID="CPh-ZE-fnR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="034-mk-pjX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="訊息牆" id="4NL-wZ-oPB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D4g-9K-SVa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vWI-BZ-7fA" kind="relationship" relationship="rootViewController" id="BPT-Je-owT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efb-bk-js3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="-40.178571428571423"/>
         </scene>
     </scenes>
     <resources>
