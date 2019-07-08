@@ -18,6 +18,10 @@ class InfoVC: UIViewController {
     
 
     @IBAction func logoutButtonAction(_ sender: UIButton) {
+        let userDefaults = UserDefaults()
+        userDefaults.removeObject(forKey: "LoginEmail")
+        userDefaults.synchronize()
+        self.tabBarController?.selectedIndex = 0
     }
     
     /*
