@@ -37,3 +37,20 @@ class MainVC: UIViewController {
     */
 
 }
+
+extension MainVC: UITableViewDelegate {
+    
+}
+
+extension MainVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellID = "MY_CELL"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        cell.textLabel?.text = "\(indexPath.row)"
+        return cell
+    }
+}

@@ -91,15 +91,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="登入成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfV-aj-UzB">
-                                <rect key="frame" x="172" y="438" width="70" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="orM-JY-KHh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MY_CELL" id="1dG-R5-vwd">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1dG-R5-vwd" id="LxL-D8-cwP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vWI-BZ-7fA" id="pWh-Vb-dyD"/>
+                                    <outlet property="delegate" destination="vWI-BZ-7fA" id="Wj5-Jc-eUZ"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hg8-6H-h39" firstAttribute="bottom" secondItem="orM-JY-KHh" secondAttribute="bottom" id="2zv-zd-tv7"/>
+                            <constraint firstItem="orM-JY-KHh" firstAttribute="top" secondItem="Hg8-6H-h39" secondAttribute="top" id="72R-xh-7nz"/>
+                            <constraint firstItem="Hg8-6H-h39" firstAttribute="trailing" secondItem="orM-JY-KHh" secondAttribute="trailing" id="hcz-j4-vLD"/>
+                            <constraint firstItem="orM-JY-KHh" firstAttribute="leading" secondItem="Hg8-6H-h39" secondAttribute="leading" id="pw6-KU-E1O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hg8-6H-h39"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="訊息牆" id="4NL-wZ-oPB"/>
