@@ -55,6 +55,11 @@ extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150.5
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell: MyCell = tableView.cellForRow(at: indexPath) as! MyCell
+        selectedCell.setSelected(false, animated: true)
+    }
 }
 
 extension MainVC: UITableViewDataSource {
