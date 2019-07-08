@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vWI-BZ-7fA">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -77,17 +77,16 @@
                     <connections>
                         <outlet property="emailTextField" destination="aLc-b8-47w" id="dG0-Vy-EGy"/>
                         <outlet property="passwordTextField" destination="26g-N0-6HQ" id="aQB-ee-IZN"/>
-                        <segue destination="vWI-BZ-7fA" kind="show" identifier="TO_MAIN_VC" id="YKP-Ip-N6E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+            <point key="canvasLocation" x="-22" y="690"/>
         </scene>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="sPB-AI-kY8">
             <objects>
-                <viewController id="vWI-BZ-7fA" sceneMemberID="viewController">
+                <viewController id="vWI-BZ-7fA" customClass="MainVC" customModule="UIKitDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9f1-uB-Mnc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,10 +102,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Hg8-6H-h39"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="TO_LOGIN_VC" id="WmN-RQ-Tqt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aki-3p-rlp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="21"/>
+            <point key="canvasLocation" x="-22" y="-40"/>
         </scene>
     </scenes>
     <resources>

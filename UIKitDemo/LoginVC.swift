@@ -25,7 +25,7 @@ class LoginVC: UIViewController {
             print("登入失敗")
             return
         }
-        performSegue(withIdentifier: "TO_MAIN_VC", sender: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
 
