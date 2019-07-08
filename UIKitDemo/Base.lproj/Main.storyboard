@@ -132,11 +132,31 @@
         <!--帳號資訊-->
         <scene sceneID="djS-Se-qzU">
             <objects>
-                <viewController id="mgw-Xo-7AF" sceneMemberID="viewController">
+                <viewController id="mgw-Xo-7AF" customClass="InfoVC" customModule="UIKitDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6VJ-Ae-4BR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZf-4x-CYV">
+                                <rect key="frame" x="65" y="426" width="284" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="LH0-Qx-6dx"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="登出"/>
+                                <connections>
+                                    <action selector="logoutButtonAction:" destination="mgw-Xo-7AF" eventType="touchUpInside" id="D1J-Oz-1T7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tZf-4x-CYV" firstAttribute="centerY" secondItem="6VJ-Ae-4BR" secondAttribute="centerY" id="Cyk-gV-2vG"/>
+                            <constraint firstItem="eFw-oh-pTR" firstAttribute="trailing" secondItem="tZf-4x-CYV" secondAttribute="trailing" constant="65" id="QBv-WY-5A8"/>
+                            <constraint firstItem="tZf-4x-CYV" firstAttribute="leading" secondItem="eFw-oh-pTR" secondAttribute="leading" constant="65" id="a08-kS-ssV"/>
+                            <constraint firstItem="tZf-4x-CYV" firstAttribute="centerX" secondItem="6VJ-Ae-4BR" secondAttribute="centerX" id="rPo-2F-LV4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eFw-oh-pTR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="帳號資訊" id="tDW-aC-WFb"/>
