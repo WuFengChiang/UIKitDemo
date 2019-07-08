@@ -12,6 +12,17 @@ class MainVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let messages: [Message] = [
+        Message(title: "AR 課程",
+                date: Date(),
+                content: "今天教 UIKit 哦！",
+                headImage: UIImage(named: "studioA")!),
+        Message(title: "暑假中的一天",
+                date: Calendar.current.date(byAdding: .day, value: -1, to: Date())!,
+                content: "放暑假真愉快",
+                headImage: UIImage(named: "studioA")!)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,16 +59,29 @@ extension MainVC: UITableViewDelegate {
 
 extension MainVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellID = "MY_CELL"
         let cell: MyCell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MyCell
-        cell.titleLabel.text = "標題"
-        cell.dateLabel.text = "日期"
-        cell.messageLabel.text = "訊息"
-        cell.headImageView.image = UIImage(named: "studioA")
+        cell.titleLabel.text = messages[indexPath.row].title
+        cell.dateLabel.text = "\(messages[indexPath.row].date)"
+        cell.messageLabel.text = messages[indexPath.row].content
+        cell.headImageView.image = messages[indexPath.row].headImage
         return cell
+    }
+}
+
+struct Message {
+    var title: String
+    var date: Date
+    var content: String
+    var headImage: UIImage
+    init(title: String, date: Date, content: String, headImage: UIImage) {
+        self.title = title
+        self.date = date
+        self.content = content
+        self.headImage = headImage
     }
 }
