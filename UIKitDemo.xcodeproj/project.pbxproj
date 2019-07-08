@@ -16,6 +16,7 @@
 		BD5D9CD022D349E000ED2BEC /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D9CCF22D349E000ED2BEC /* InfoVC.swift */; };
 		BD5D9CD322D368B500ED2BEC /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D9CD122D368B500ED2BEC /* MyCell.swift */; };
 		BD5D9CD422D368B500ED2BEC /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5D9CD222D368B500ED2BEC /* MyCell.xib */; };
+		BD5D9CD622D375B700ED2BEC /* MessageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D9CD522D375B700ED2BEC /* MessageDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BD5D9CCF22D349E000ED2BEC /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		BD5D9CD122D368B500ED2BEC /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 		BD5D9CD222D368B500ED2BEC /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
+		BD5D9CD522D375B700ED2BEC /* MessageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				BD5D9CBD22D3339600ED2BEC /* LoginVC.swift */,
 				BD5D9CCD22D3465300ED2BEC /* MainVC.swift */,
 				BD5D9CCF22D349E000ED2BEC /* InfoVC.swift */,
+				BD5D9CD522D375B700ED2BEC /* MessageDetailVC.swift */,
 				BD5D9CBF22D3339600ED2BEC /* Main.storyboard */,
 				BD5D9CD122D368B500ED2BEC /* MyCell.swift */,
 				BD5D9CD222D368B500ED2BEC /* MyCell.xib */,
@@ -151,6 +154,7 @@
 				BD5D9CD022D349E000ED2BEC /* InfoVC.swift in Sources */,
 				BD5D9CD322D368B500ED2BEC /* MyCell.swift in Sources */,
 				BD5D9CBE22D3339600ED2BEC /* LoginVC.swift in Sources */,
+				BD5D9CD622D375B700ED2BEC /* MessageDetailVC.swift in Sources */,
 				BD5D9CCE22D3465300ED2BEC /* MainVC.swift in Sources */,
 				BD5D9CBC22D3339600ED2BEC /* AppDelegate.swift in Sources */,
 			);

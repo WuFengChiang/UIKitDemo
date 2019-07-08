@@ -38,16 +38,17 @@ class MainVC: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "TO_MESSAGE_DETAIL" {
+            if let myCell = sender as? MyCell {
+                let detailVC: MessageDetailVC = segue.destination as! MessageDetailVC
+                detailVC.messageTitle = myCell.titleLabel.text
+                detailVC.messageContent = myCell.messageLabel.text
+            }
+        }
+        
     }
-    */
 
 }
 
@@ -59,6 +60,7 @@ extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell: MyCell = tableView.cellForRow(at: indexPath) as! MyCell
         selectedCell.setSelected(false, animated: true)
+        performSegue(withIdentifier: "TO_MESSAGE_DETAIL", sender: selectedCell)
     }
 }
 

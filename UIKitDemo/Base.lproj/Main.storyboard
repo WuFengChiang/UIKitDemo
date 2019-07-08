@@ -83,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="2771.0144927536235" y="-366.29464285714283"/>
         </scene>
-        <!--MainVC-->
+        <!--訊息牆-->
         <scene sceneID="sPB-AI-kY8">
             <objects>
                 <viewController id="vWI-BZ-7fA" customClass="MainVC" customModule="UIKitDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,15 +109,49 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hg8-6H-h39"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kWB-Od-4iK"/>
+                    <navigationItem key="navigationItem" title="訊息牆" id="kWB-Od-4iK"/>
                     <connections>
                         <outlet property="tableView" destination="orM-JY-KHh" id="IRZ-UR-JPh"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="TO_LOGIN_VC" id="WmN-RQ-Tqt"/>
+                        <segue destination="p6f-pV-BQr" kind="show" identifier="TO_MESSAGE_DETAIL" id="3Do-sE-QI8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aki-3p-rlp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1797.1014492753625" y="-40.178571428571423"/>
+        </scene>
+        <!--Message DetailVC-->
+        <scene sceneID="R9k-So-DgO">
+            <objects>
+                <viewController id="p6f-pV-BQr" customClass="MessageDetailVC" customModule="UIKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L1g-4s-V9y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K6-T6-ID3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I93-Pq-2dS" firstAttribute="trailing" secondItem="6K6-T6-ID3" secondAttribute="trailing" id="U5d-Tb-WzC"/>
+                            <constraint firstItem="I93-Pq-2dS" firstAttribute="bottom" secondItem="6K6-T6-ID3" secondAttribute="bottom" id="Xep-07-Ngh"/>
+                            <constraint firstItem="6K6-T6-ID3" firstAttribute="leading" secondItem="I93-Pq-2dS" secondAttribute="leading" id="aGE-C9-BIb"/>
+                            <constraint firstItem="6K6-T6-ID3" firstAttribute="top" secondItem="I93-Pq-2dS" secondAttribute="top" id="cnt-J1-3pj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I93-Pq-2dS"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="6K6-T6-ID3" id="fxx-xQ-gZX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xh-kg-x09" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2771" y="308"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jrf-tQ-awS">
