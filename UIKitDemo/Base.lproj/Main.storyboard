@@ -94,16 +94,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="orM-JY-KHh">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MY_CELL" id="1dG-R5-vwd">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1dG-R5-vwd" id="LxL-D8-cwP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="vWI-BZ-7fA" id="pWh-Vb-dyD"/>
                                     <outlet property="delegate" destination="vWI-BZ-7fA" id="Wj5-Jc-eUZ"/>
@@ -121,6 +111,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="訊息牆" id="4NL-wZ-oPB"/>
                     <connections>
+                        <outlet property="tableView" destination="orM-JY-KHh" id="IRZ-UR-JPh"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="TO_LOGIN_VC" id="WmN-RQ-Tqt"/>
                     </connections>
                 </viewController>
@@ -172,7 +163,6 @@
                             <constraint firstItem="tZf-4x-CYV" firstAttribute="centerY" secondItem="6VJ-Ae-4BR" secondAttribute="centerY" id="Cyk-gV-2vG"/>
                             <constraint firstItem="eFw-oh-pTR" firstAttribute="trailing" secondItem="tZf-4x-CYV" secondAttribute="trailing" constant="65" id="QBv-WY-5A8"/>
                             <constraint firstItem="tZf-4x-CYV" firstAttribute="leading" secondItem="eFw-oh-pTR" secondAttribute="leading" constant="65" id="a08-kS-ssV"/>
-                            <constraint firstItem="tZf-4x-CYV" firstAttribute="centerX" secondItem="6VJ-Ae-4BR" secondAttribute="centerX" id="rPo-2F-LV4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eFw-oh-pTR"/>
                     </view>

@@ -10,10 +10,12 @@ import UIKit
 
 class MainVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.register(UINib(nibName: "MyCell", bundle: nil), forCellReuseIdentifier: "MY_CELL")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,7 +41,9 @@ class MainVC: UIViewController {
 }
 
 extension MainVC: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150.5
+    }
 }
 
 extension MainVC: UITableViewDataSource {
@@ -49,8 +53,11 @@ extension MainVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellID = "MY_CELL"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
+        let cell: MyCell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MyCell
+        cell.titleLabel.text = "標題"
+        cell.dateLabel.text = "日期"
+        cell.messageLabel.text = "訊息"
+        cell.headImageView.image = UIImage(named: "studioA")
         return cell
     }
 }
